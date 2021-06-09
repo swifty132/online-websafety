@@ -33,13 +33,29 @@ p {
 }
 
 button {
-  border-radius: 12%;
+  border-radius: 12px;
+  border: 3px solid #24b5ae;
   font-size: 20px;
   padding: 10px;
-  background-color: grey;
+  background-color: #49d1ca;
+  transition-duration: 0.3s;
+}
+button:hover {
+  background-color: shade(#663399, 42%);
 }
 </style>
 
+
 <style type="javascript">
-console.log("hello")
+  @function tint($color, $percentage) {
+  	@return mix(white, $color, $percentage);
+  }
+
+  @function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+  }
 </style>
+
+
+
+
