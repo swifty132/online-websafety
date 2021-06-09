@@ -39,22 +39,13 @@ button {
   padding: 10px;
   background-color: #49d1ca;
   transition-duration: 0.3s;
+  opacity: 70%;
 }
 button:hover {
-  background-color: shade(#663399, 42%);
+  opacity: 100%;
 }
 </style>
 
-
-<style type="javascript">
-  @function tint($color, $percentage) {
-  	@return mix(white, $color, $percentage);
-  }
-
-  @function shade($color, $percentage) {
-    @return mix(black, $color, $percentage);
-  }
-</style>
 
 
 
