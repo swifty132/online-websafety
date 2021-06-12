@@ -11,7 +11,6 @@ function off() {
 document.getElementById("popup").style.display = "none";
 }
 
-
 /*var element = document.getElementById("page");
     var orig_content = element.innnerHTML;
     var orig_css = element.style;
