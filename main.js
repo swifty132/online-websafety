@@ -1,6 +1,14 @@
 function buttonFunc() {
     alert("MUWHAHAHAHA")
+    on()
+}
 
+function on() {
+document.getElementById("popup").style.display = "block";
+}
+
+function off() {
+document.getElementById("popup").style.display = "none";
 }
 
 
