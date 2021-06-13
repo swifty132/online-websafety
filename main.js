@@ -32,51 +32,57 @@ var items_left = Object.assign({},origData);
 var details;
 
 function pressedButton() {
-    //alert("MUWHAHAHAHA")
-    on();
+    show_pop();
 };
 
-function on() {
+function show_pop() {
     document.getElementById("popup").style.display = "block";
     document.getElementById("p-title").innerHTML = details["title"];
     document.getElementById("p-desc").innerHTML = details["desc"];
     document.getElementById("opt-1").innerHTML = details["opt-1"];
     document.getElementById("opt-2").innerHTML = details["opt-2"];
-
-    setup_popup();
 };
 
-function off() {
+function hide_pop() {
     document.getElementById("popup").style.display = "none";
 };
 
 function setup_popup() {
-    console.log(origData)
-    console.log(items_left)
     var keys = Object.keys(items_left);
-    console.log(keys.length)
     if (keys.length > 0) {
-        console.log("new");
         var key_index = Math.floor(Math.random() * keys.length);
         var rando_key = keys[key_index];
         details = items_left[rando_key];
         delete items_left[rando_key];
-        console.log(origData)
-        console.log(items_left)
     }
     else {
-        console.log("reset");
         items_left = Object.assign({},origData);
     }
 }
 
 function opt_pressed(id) {
-    //console.log(id);
-    off();
+    feedback_screen(id);
+    hide_pop();
+}
+
+function feedback_screen(id) {
+    var feedback_el = document.getElementById("feedback");
+    
+    if (id == details["correct"]) {
+        document.getElementById("f-title").innerHTML = "Correct!";
+        feedback_el.style.cssText = feedback_el.style.cssText + "background-color: darkgreen;";
+    }
+    else {
+        document.getElementById("f-title").innerHTML = "Wrong.. <br>Better luck next time!";
+        feedback_el.style.cssText = feedback_el.style.cssText + "background-color: darkred;";
+    }
+    document.getElementById("f-desc").innerHTML = details["feedback"];
+    feedback_el.style.display = "block";
+    setup_popup();
 }
 
 function resume() {
-    
+    document.getElementById("feedback").style.display = "none";
 }
 setup_popup();
 
