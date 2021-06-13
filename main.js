@@ -32,7 +32,12 @@ var items_left = Object.assign({},origData);
 var details;
 
 function pressedButton() {
-    show_pop();
+    document.getElementById("but1").style.visibility = "hidden";
+    
+    setTimeout(function() {
+        show_pop();
+    }, 2000)
+    
 };
 
 function show_pop() {
@@ -54,9 +59,12 @@ function setup_popup() {
         var rando_key = keys[key_index];
         details = items_left[rando_key];
         delete items_left[rando_key];
+        setTimeout(function() {
+            show_pop();
+        }, Math.floor(Math.random() * 7000) + 3000)
     }
     else {
-        items_left = Object.assign({},origData);
+        restart_promp();
     }
 }
 
@@ -78,17 +86,30 @@ function feedback_screen(id) {
     }
     document.getElementById("f-desc").innerHTML = details["feedback"];
     feedback_el.style.display = "block";
-    setup_popup();
 }
 
 function resume() {
     document.getElementById("feedback").style.display = "none";
+    setup_popup();
 }
-setup_popup();
 
+function restart_promp() {
+    document.getElementById("reset").style.display = "block";
+}
 
-/*var element = document.getElementById("page");
-    var orig_content = element.innnerHTML;
-    var orig_css = element.style;
-    element.innerHTML = "YOU FOOL!!";
-    element.setAttribute("style", "font-size: 100px; font-style: bold; color: white; text-align: center; height: 100vh; display: flex; justify-content: center; align-items: center;");*/
+function reset() {
+    items_left = Object.assign({},origData);
+    document.getElementById("reset").style.display = "none";
+    var keys = Object.keys(items_left);
+    var key_index = Math.floor(Math.random() * keys.length);
+    var rando_key = keys[key_index];
+    details = items_left[rando_key];
+    delete items_left[rando_key];
+    document.getElementById("but1").style.visibility = "visible";
+}
+
+var keys = Object.keys(items_left);
+var key_index = Math.floor(Math.random() * keys.length);
+var rando_key = keys[key_index];
+details = items_left[rando_key];
+delete items_left[rando_key];
