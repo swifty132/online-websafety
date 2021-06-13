@@ -1,22 +1,28 @@
-const popData = {
+const origData = {
         "tech-support": {
             "name": "Tech Support Scam",
             "title": "Your PC has a virus!",
-            "description": "A virus on your pc.."
+            "desc": "We have detected a virus on your pc!!",
+            "opt-1": "Call the number",
+            "opt-2": "Close the tab"
         },
-        "jeff": {
-            "name": "Tech Support Scam",
-            "title": "heya!",
-            "description": "A virus on your pc.."
+        "fake-download": {
+            "name": "Fake Download Virus",
+            "title": "Your PC is unprotected!",
+            "desc": "Your PC could be attacked at ANYTIME!",
+            "opt-1": "Call the number",
+            "opt-2": "Close the tab"
         },
-        "bob": {
-            "name": "Tech Support Scam",
-            "title": "sup",
-            "description": "A virus on your pc.."
+        "Cookies": {
+            "name": "Cookie Prompt",
+            "title": "Accept Cookies to continue reading",
+            "desc": "In order for you to continue reading you must accept cookies, otherwise we will close this tab.",
+            "opt-1": "Call the number",
+            "opt-2": "Close the tab"        
         }
     };
 
-var items_left = popData;
+var items_left = origData;
 var details;
 
 function pressedButton() {
@@ -27,8 +33,13 @@ function pressedButton() {
 function on() {
     document.getElementById("popup").style.display = "block";
     document.getElementById("p-title").innerHTML = details["title"];
+    document.getElementById("p-desc").innerHTML = details["desc"];
+    document.getElementById("opt-1").innerHTML = details["opt-1"];
+    document.getElementById("opt-2").innerHTML = details["opt-2"];
+
     console.log(document.getElementById("p-title").innerHTML);
-    console.log(popData);
+    console.log(origData);
+
     setup_popup();
 };
 
@@ -39,8 +50,9 @@ function off() {
 function setup_popup() {
     var keys = Object.keys(items_left);
     var key_index = Math.floor(Math.random() * keys.length);
-    var rando_key = keys[key_index]
+    var rando_key = keys[key_index];
     details = items_left[rando_key];
+    delete items_left[rando_key];
 }
 setup_popup();
 

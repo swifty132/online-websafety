@@ -2,6 +2,16 @@
     "tech-support": {
         "name": "Tech Support Scam",
         "title": "Your PC has a virus!",
-        "description": "A virus on your pc.."
+        "desc": "We have detected a virus on your pc!!"
+    },
+    "fake-download": {
+        "name": "Fake Download Virus",
+        "title": "Your PC is unprotected!",
+        "desc": "Your PC could be attacked at ANYTIME!"
+    },
+    "Cookies": {
+        "name": "Cookie Prompt",
+        "title": "Accept Cookies to continue reading",
+        "desc": "In order for you to continue reading you must accept cookies, otherwise we will close this tab."
     }
 }
