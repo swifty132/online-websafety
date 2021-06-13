@@ -2,16 +2,28 @@
     "tech-support": {
         "name": "Tech Support Scam",
         "title": "Your PC has a virus!",
-        "desc": "We have detected a virus on your pc!!"
+        "desc": "We have detected a virus on your pc!!",
+        "opt-1": "Call the number",
+        "opt-2": "Close the tab",
+        "correct": 2,
+        "feedback": "this type of scam"
     },
     "fake-download": {
         "name": "Fake Download Virus",
         "title": "Your PC is unprotected!",
-        "desc": "Your PC could be attacked at ANYTIME!"
+        "desc": "Your PC could be attacked at ANYTIME!",
+        "opt-1": "Call the number",
+        "opt-2": "Close the tab",
+        "correct": 2,
+        "feedback": "this type of scam"
     },
     "Cookies": {
         "name": "Cookie Prompt",
         "title": "Accept Cookies to continue reading",
-        "desc": "In order for you to continue reading you must accept cookies, otherwise we will close this tab."
+        "desc": "In order for you to continue reading you must accept cookies, otherwise we will close this tab.",
+        "opt-1": "Call the number",
+        "opt-2": "Close the tab",
+        "correct": 2,
+        "feedback": "this type of scam"
     }
 }
