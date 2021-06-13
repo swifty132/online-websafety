@@ -51,14 +51,20 @@ p {
 #p-desc {
   font-size: 22px;
   text-align: center;
-  color: #00e1ff;
+  color: #c2c2c2;
 }
 #popup button {
   border-radius: 12px;
-  border: 3px solid rgb(161, 61, 61);
+  border: 3px solid rgb(173, 21, 21);
   font-size: 20px;
   padding: 10px;
-  background-color: rgb(173, 21, 21);
+  background-color: rgb(189, 53, 53);
   transition-duration: 0.3s;
   cursor: pointer;
+  margin: 5%;
+}
+#popup button:hover {
+  background-color: rgb(209, 73, 73);
+  border: 3px solid rgb(193, 41, 41);
+  transform: scale(1.05, 1.05);
 }

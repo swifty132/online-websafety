@@ -54,6 +54,11 @@ function setup_popup() {
     details = items_left[rando_key];
     delete items_left[rando_key];
 }
+
+function opt_pressed(id) {
+    console.log(id);
+    off();
+}
 setup_popup();
 
 
