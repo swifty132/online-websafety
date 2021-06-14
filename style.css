@@ -10,7 +10,7 @@ h1 {
 }
 p {
   font-family: verdana;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
@@ -51,6 +51,8 @@ p {
   font-size: 22px;
   text-align: center;
   color: #c2c2c2;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 #popup button {
   border-radius: 12px;
@@ -60,7 +62,8 @@ p {
   background-color: rgb(189, 53, 53);
   transition-duration: 0.3s;
   cursor: pointer;
-  margin: 5%;
+  margin: 3%;
+  width: 30%;
 }
 #popup button:hover {
   background-color: rgb(209, 73, 73);
@@ -82,14 +85,16 @@ p {
   z-index: 2;
 }
 #f-title {
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
-  color: black;
+  color: white;
 }
 #f-desc {
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
-  color: #000000;
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 #feedback button {
   border-radius: 12px;
@@ -125,6 +130,8 @@ p {
   font-size: 50px;
   text-align: center;
   color: white;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 #reset button {
   border-radius: 12px;
