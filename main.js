@@ -95,10 +95,7 @@ function reset() {
 xhttp.onload = function() {
     var tempData;
     tempData = JSON.parse(xhttp.responseText);
-    console.log("DONE!")
     origData = Object.assign({},tempData);
-    console.log(tempData)
-    console.log(origData)
     start();
 }
 
